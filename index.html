@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 2</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="voiture.json"></script>
+</head>
+<body>
+  <h1>Exercices AngularJS - Partie 4  Exercice 2</h1>
+  <h3>Faire une page HTML permettant d'afficher la liste des voitures et leur couleur du fichier voiture.json.</h3>
+  <div ng-controller="voituresCtrl">
+    <table cellspacing="2px" cellpadding="2px;" rules="all" style="border:solid 1px black;">
+      <thead>
+        <th>Modèle</th>
+        <th>Couleur</th>
+      </thead>
+      <!-- ng-repeat est une directive angular qui permet de boucler directement dans le html -->
+      <tr ng-repeat="voiture in voitures">
+        <td>
+          <!-- voiture.marque est une expression -->
+          {{voiture.marque}}
+        </td>
+        <td>
+          {{voiture.couleur}}
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
